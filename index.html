@@ -1,84 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stylized Menu Site</title>
+  <meta charset="UTF-8">
+  <title>Central Danao Community Church Renovation Project</title>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      background: #f4f4f4;
     }
-
-    nav {
-      background-color: #333;
-      padding: 1em;
+    .header {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .tabs {
       display: flex;
       justify-content: center;
-      gap: 2em;
+      flex-wrap: wrap;
+      background: #eee;
+      padding: 10px;
     }
-
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown button {
-      background-color: #444;
-      color: white;
-      border: none;
-      padding: 0.5em 1em;
+    .tab {
+      margin: 5px;
+      padding: 10px 20px;
+      background: white;
+      border: 1px solid #ccc;
       cursor: pointer;
+      transition: background 0.3s;
     }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #555;
-      min-width: 160px;
-      z-index: 1;
+    .tab:hover {
+      background: #ddd;
     }
-
-    .dropdown-content a {
-      color: white;
-      padding: 0.5em 1em;
-      display: block;
-      text-decoration: none;
+    .main-content {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px;
     }
-
-    .dropdown-content a:hover {
-      background-color: #777;
+    .repairs, .approvals {
+      background: white;
+      padding: 15px;
+      border: 1px solid #ccc;
+      width: 45%;
     }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
+    .approvals h3 {
+      margin-top: 0;
+    }
+    .approvals ul {
+      list-style: none;
+      padding: 0;
+    }
+    .approvals li {
+      padding: 5px 0;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="dropdown">
-      <button>Home</button>
-      <div class="dropdown-content">
-        <a href="#">Overview</a>
-        <a href="#">Updates</a>
-      </div>
+
+  <div class="header">
+    <h1>Central Danao Community Church Renovation Project</h1>
+  </div>
+
+  <div class="tabs">
+    <div class="tab">History</div>
+    <div class="tab">The Community</div>
+    <div class="tab">isbds</div>
+    <div class="tab">Rand Officer</div>
+    <div class="tab">Officers</div>
+    <div class="tab">Donations</div>
+  </div>
+
+  <div class="main-content">
+    <div class="repairs">
+      <h2>Repair History</h2>
+      <p>1st repair</p>
+      <p>2nd repair</p>
+      <p>Durvea</p>
     </div>
-    <div class="dropdown">
-      <button>Gallery</button>
-      <div class="dropdown-content">
-        <a href="#">Images</a>
-        <a href="#">Videos</a>
-      </div>
+
+    <div class="approvals">
+      <h3>Pastricks approved by:</h3>
+      <ul>
+        <li>1. Laking</li>
+        <li>2. Reighs</li>
+        <li>3. Wishes</li>
+        <li>4. [Pending]</li>
+      </ul>
     </div>
-    <div class="dropdown">
-      <button>About</button>
-      <div class="dropdown-content">
-        <a href="#">Team</a>
-        <a href="#">Contact</a>
-      </div>
-    </div>
-  </nav>
+  </div>
+
 </body>
 </html>
