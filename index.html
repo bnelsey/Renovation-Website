@@ -1,120 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile-Friendly Website</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stylized Menu Site</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-        }
+    nav {
+      background-color: #333;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+    }
 
-        /* Banner Styles */
-        .banner {
-            background-color: #f00;
-            height: 200px;
-            width: 100%;
-            position: relative;
-            top: 0;
-            z-index: 1;
-        }
+    .dropdown {
+      position: relative;
+    }
 
-        .banner img {
-            width: 100%;
-            height: auto;
-            max-width: 1200px;
-        }
+    .dropdown button {
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 0.5em 1em;
+      cursor: pointer;
+    }
 
-        /* Main Content Styles */
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            min-height: 80vh; /* Ensures content reaches at least 80% of viewport height */
-        }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #555;
+      min-width: 160px;
+      z-index: 1;
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column layout */
-            gap: 20px;
-            margin-top: 100px;
-        }
+    .dropdown-content a {
+      color: white;
+      padding: 0.5em 1em;
+      display: block;
+      text-decoration: none;
+    }
 
-        .image-container {
-            width: 100%;
-            height: 300px;
-            background-color: #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
+    .dropdown-content a:hover {
+      background-color: #777;
+    }
 
-        .image-container:hover img {
-            transform: scale(1.05);
-            cursor: pointer;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: auto;
-            object-fit: contain; /* This ensures images scale nicely within their container */
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .banner {
-                height: 150px;
-            }
-
-            .image-container {
-                margin-bottom: 20px;
-                width: 100%;
-            }
-        }
-    </style>
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-
-    <!-- Banner -->
-    <div class="banner">
-        <img src="images/banner.jpg" alt="Banner Image">
+  <nav>
+    <div class="dropdown">
+      <button>Home</button>
+      <div class="dropdown-content">
+        <a href="#">Overview</a>
+        <a href="#">Updates</a>
+      </div>
     </div>
-
-    <div class="container">
-        <div class="grid">
-            <div class="image-container">
-                <img src="images/image1.jpg" alt="Image 1">
-            </div>
-            <div class="image-container">
-                <img src="images/image2.jpg" alt="Image 2">
-            </div>
-            <div class="image-container">
-                <img src="images/image3.jpg" alt="Image 3">
-            </div>
-            <div class="image-container">
-                <img src="images/image4.jpg" alt="Image 4">
-            </div>
-            <div class="image-container">
-                <img src="images/image5.jpg" alt="Image 5">
-            </div>
-        </div>
+    <div class="dropdown">
+      <button>Gallery</button>
+      <div class="dropdown-content">
+        <a href="#">Images</a>
+        <a href="#">Videos</a>
+      </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
-    </footer>
-
+    <div class="dropdown">
+      <button>About</button>
+      <div class="dropdown-content">
+        <a href="#">Team</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </nav>
 </body>
 </html>
